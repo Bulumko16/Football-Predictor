@@ -3,33 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football League Predictor</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Football Predictor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">England</a>
-                <ul>
-                    <li><a href="#">Leagues</a>
-                        <ul>
-                            <li><a href="#">Premier League</a></li>
-                            <li><a href="#">Championship</a></li>
-                            <!-- Other leagues here -->
-                        </ul>
-                    </li>
-                    <li><a href="#">Cups</a>
-                        <ul>
-                            <li><a href="#">FA Cup</a></li>
-                            <li><a href="#">Carabao Cup</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <!-- Similar for Spain, Germany, France, Italy, Europe -->
-        </ul>
-    </nav>
+    <header>
+        <h1>Football League & Cup Predictor</h1>
+        <nav>
+            <ul>
+                <li id="england-dropdown">
+                    <a href="#">England</a>
+                    <ul class="dropdown">
+                        <li><a href="#" id="england-leagues">Leagues</a></li>
+                        <li><a href="#" id="england-cups">Cups</a></li>
+                    </ul>
+                </li>
+                <li id="spain-dropdown">
+                    <a href="#">Spain</a>
+                    <ul class="dropdown">
+                        <li><a href="#" id="spain-leagues">Leagues</a></li>
+                        <li><a href="#" id="spain-cups">Cups</a></li>
+                    </ul>
+                </li>
+                <!-- Add more countries in similar format -->
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div id="league-standings">
+            <h2>League Standings</h2>
+            <!-- Dynamic standings will be inserted here -->
+        </div>
+
+        <div id="match-scores">
+            <h2>Match Scores</h2>
+            <!-- Dynamic scores will be inserted here -->
+        </div>
+
+        <div id="team-squad">
+            <h2>Team Squad</h2>
+            <!-- Dynamic team squad will be inserted here -->
+        </div>
+
+        <div id="submit-score">
+            <h2>Submit Match Score</h2>
+            <input type="number" id="home-team-score" placeholder="Home Team Score">
+            <input type="number" id="away-team-score" placeholder="Away Team Score">
+            <button id="submit-score-btn">Submit Score</button>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
-
